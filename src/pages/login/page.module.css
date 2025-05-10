@@ -1,0 +1,59 @@
+.row {
+    padding: 0;
+    border: 0.5px solid #000000;
+}
+
+.loginImage h3 {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.loginImage p {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 1em 0;
+    padding: 0 3em;
+}
+
+.loginText {
+    background-color: #211f1f29;
+}
+
+.loginText h2{
+    margin-bottom: 1.5em;
+    font-size: 2.5rem;
+}
+
+.loginText div {
+    margin-bottom: 0.75em;
+}
+
+.loginText a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.loginText button {
+    font-family: "ADLaM Display", sans-serif;
+    font-size: 26px;
+    width: 75%;
+    margin: 0.75em auto;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+}
+
+.loginText button:hover {
+    background-color: #a0a0a0;
+}
+
+.loginImage {
+    position: relative;
+    background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}

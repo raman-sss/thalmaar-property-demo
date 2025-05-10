@@ -1,0 +1,35 @@
+.box {
+    border: 1px solid black;
+    padding: 1em 2em;
+    width: 100%;
+}
+
+.box h3 {
+    font-weight: 600;
+    text-align: start;
+}
+
+.box label, .box span {
+    font-weight: 600;
+}
+
+.btn {
+    background-color: #000000;
+    border-radius: 30px;
+    color: #ffffff;
+    padding: 1em 2em;
+    margin: 0.5em auto 1.5em;
+}
+
+.video {
+    border: 1px solid #000000;
+    padding: 1em 0.25em;
+}
+
+.summary p {
+    border: 1px solid #000000;
+    padding: 1em 0.5em;
+    height: 10em;
+    overflow-y: scroll;
+    text-align: justify;
+}

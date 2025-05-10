@@ -1,0 +1,16 @@
+.navbar {
+    background-color: #a0a0a091;
+    padding: 2em;
+}
+
+.navbar div {
+    padding: 1em 2em;
+    background-color: #000000;
+    border-radius: 30px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.navbar div:hover {
+    background-color: #a0a0a0;
+}

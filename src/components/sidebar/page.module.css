@@ -1,0 +1,22 @@
+.sidebar {
+    text-align: start;
+    padding: 2em;
+    background-color: #a0a0a091;
+    height: 100vh;
+}
+
+.sidebar h3, .sidebar span{
+    font-weight: 600;
+}
+
+.sidebar span{
+    font-size: 18px;
+}
+
+.sidebar hr {
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    border-top: 1px solid #000000;
+    opacity: 1;
+}
