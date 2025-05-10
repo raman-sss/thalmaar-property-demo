@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/thalmaar-property-demo/static/css/main.3b958bcb.css",
-    "main.js": "/thalmaar-property-demo/static/js/main.27d635e7.js",
+    "main.js": "/thalmaar-property-demo/static/js/main.25b29166.js",
     "reactPlayerYouTube.js": "/thalmaar-property-demo/static/js/reactPlayerYouTube.162b7c79.chunk.js",
     "reactPlayerSoundCloud.js": "/thalmaar-property-demo/static/js/reactPlayerSoundCloud.c763e4ab.chunk.js",
     "reactPlayerVimeo.js": "/thalmaar-property-demo/static/js/reactPlayerVimeo.6eaf9db7.chunk.js",
@@ -18,7 +18,7 @@
     "reactPlayerPreview.js": "/thalmaar-property-demo/static/js/reactPlayerPreview.7b4ceeee.chunk.js",
     "index.html": "/thalmaar-property-demo/index.html",
     "main.3b958bcb.css.map": "/thalmaar-property-demo/static/css/main.3b958bcb.css.map",
-    "main.27d635e7.js.map": "/thalmaar-property-demo/static/js/main.27d635e7.js.map",
+    "main.25b29166.js.map": "/thalmaar-property-demo/static/js/main.25b29166.js.map",
     "reactPlayerYouTube.162b7c79.chunk.js.map": "/thalmaar-property-demo/static/js/reactPlayerYouTube.162b7c79.chunk.js.map",
     "reactPlayerSoundCloud.c763e4ab.chunk.js.map": "/thalmaar-property-demo/static/js/reactPlayerSoundCloud.c763e4ab.chunk.js.map",
     "reactPlayerVimeo.6eaf9db7.chunk.js.map": "/thalmaar-property-demo/static/js/reactPlayerVimeo.6eaf9db7.chunk.js.map",
@@ -36,6 +36,6 @@
   },
   "entrypoints": [
     "static/css/main.3b958bcb.css",
-    "static/js/main.27d635e7.js"
+    "static/js/main.25b29166.js"
   ]
 }
