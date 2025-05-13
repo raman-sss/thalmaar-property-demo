@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
     return (
-        <div className="login-page d-flex m-0">
-            <div className={`col-sm-6 ${styles.row}`}>
+        <div className="login-page d-flex justify-content-center align-items-center m-0">
+            {/* <div className={`col-sm-6 ${styles.row}`}>
                 <div className={`d-flex justify-content-center flex-column ${styles.loginImage}`}>
                     <h3>Welcome</h3>
                     <p>Please Sign in into your account with the provided details to continue</p>
                 </div>
-            </div>
+            </div> */}
             <div className={`col-sm-6 d-flex justify-content-center flex-column align-items-center ${styles.loginText} ${styles.row}`}>
                 <h2>Sign In to your account</h2>
                 <form className={`col-sm-6 d-flex justify-content-center flex-column align-items-center`}>

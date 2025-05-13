@@ -9,8 +9,15 @@
     border-radius: 30px;
     color: #ffffff;
     font-weight: 600;
+    text-decoration: none;
 }
 
 .navbar div:hover {
     background-color: #a0a0a0;
+}
+
+.navbar a {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
 }

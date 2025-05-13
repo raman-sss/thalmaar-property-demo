@@ -12,11 +12,11 @@ function App() {
   return (
     <Router>
       <div className="App container-fluid">
-        <div class="row">
+        <div className="row">
           <div className="col-sm-12">
             <Navbar />
             <Routes>
-              <Route path="/" element={<Login />} />
+              <Route path="/thalmaar-property-demo" element={<Login />} />
               <Route path='/home' element={<Home />} />
             </Routes>
           </div>

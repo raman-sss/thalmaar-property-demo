@@ -1,6 +1,6 @@
 .row {
     padding: 0;
-    border: 0.5px solid #000000;
+    border: 0.5px solid var(--borderColor);
 }
 
 .loginImage h3 {
@@ -17,6 +17,7 @@
 
 .loginText {
     background-color: #211f1f29;
+    padding: 7.5em 2em;
 }
 
 .loginText h2{

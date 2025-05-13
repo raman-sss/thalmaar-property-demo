@@ -17,6 +17,37 @@
     height: 0;
     margin: 0;
     overflow: hidden;
-    border-top: 1px solid #000000;
+    border-top: 1px solid var(--borderColor);
     opacity: 1;
+}
+
+.sidebar h3 {
+    font-weight: 600;
+    text-align: start;
+}
+
+.sidebar label, .sidebar span {
+    font-weight: 600;
+}
+
+.smallBtn {
+    background-color: #000000;
+    border-radius: 30px;
+    color: #ffffff;
+    padding: 0.5em 1em;
+    margin: 0.25em;
+    width: fit-content;
+}
+
+.smallBtn span {
+    font-size: 14px;
+}
+
+.btn {
+    border-radius: 30px;
+    color: #ffffff;
+    padding: 1em 2em;
+    margin: 0.5em;
+    width: fit-content;
+    border-color: transparent;
 }
