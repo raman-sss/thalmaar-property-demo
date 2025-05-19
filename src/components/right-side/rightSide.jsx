@@ -76,15 +76,15 @@ const RightSide = () => {
                 <h3 className="mt-3 mb-5">Detections</h3>
                 <div className="d-flex flex-row mb-4 justify-content-between">
                     <div className="btn-group">
-                        <button type="button" className="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button type="button" className={`btn btn-danger dropdown-toggle ${styles2.dropdown}`} data-bs-toggle="dropdown" aria-expanded="false">
                             Camera Feed 2
                         </button>
                         <ul className="dropdown-menu">
-                            <li><a className="dropdown-item" href="#">Camera Feed 1</a></li>
+                            <li><a className={`dropdown-item ${styles2.dropdown}`} href="#">Camera Feed 1</a></li>
                             <li><hr className="dropdown-divider" /></li>
-                            <li><a className="dropdown-item" href="#">Camera Feed 2</a></li>
+                            <li><a className={`dropdown-item ${styles2.dropdown}`} href="#">Camera Feed 2</a></li>
                             <li><hr className="dropdown-divider" /></li>
-                            <li><a className="dropdown-item" href="#">Camera Feed 3</a></li>
+                            <li><a className={`dropdown-item ${styles2.dropdown}`} href="#">Camera Feed 3</a></li>
                         </ul>
                     </div>
 

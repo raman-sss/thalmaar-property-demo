@@ -21,6 +21,7 @@ code {
 }
 
 body {
-  
+  word-spacing: 0.15px;
+  letter-spacing: 0.25px;
 }
 

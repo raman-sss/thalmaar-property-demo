@@ -82,19 +82,19 @@ const LeftSide = () => {
                 <h3 className="mt-3 mb-5">Detailed Scene Analysis</h3>
                 <ul className="nav nav-tabs">
                     <li
-                        className={`nav-item nav-link ${activeTab === 1 ? "active" : ""}`}
+                        className={`nav-item nav-link ${styles.listItem} ${activeTab === 1 ? "active" : ""}`}
                         onClick={() => handleTabClick(1)}
                     >
                         Camera Feed 1
                     </li>
                     <li
-                        className={`nav-item nav-link ${activeTab === 2 ? "active" : ""}`}
+                        className={`nav-item nav-link ${styles.listItem} ${activeTab === 2 ? "active" : ""}`}
                         onClick={() => handleTabClick(2)}
                     >
                         Camera Feed 2
                     </li>
                     <li
-                        className={`nav-item nav-link ${activeTab === 3 ? "active" : ""}`}
+                        className={`nav-item nav-link ${styles.listItem} ${activeTab === 3 ? "active" : ""}`}
                         onClick={() => handleTabClick(3)}
                     >
                         Camera Feed 3

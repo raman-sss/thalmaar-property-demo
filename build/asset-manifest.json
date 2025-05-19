@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/thalmaar-property-demo/static/css/main.cca193ee.css",
+    "main.js": "/thalmaar-property-demo/static/js/main.cc4f90e7.js",
+    "reactPlayerYouTube.js": "/thalmaar-property-demo/static/js/reactPlayerYouTube.162b7c79.chunk.js",
+    "reactPlayerSoundCloud.js": "/thalmaar-property-demo/static/js/reactPlayerSoundCloud.c763e4ab.chunk.js",
+    "reactPlayerVimeo.js": "/thalmaar-property-demo/static/js/reactPlayerVimeo.6eaf9db7.chunk.js",
+    "reactPlayerMux.js": "/thalmaar-property-demo/static/js/reactPlayerMux.c6f96480.chunk.js",
+    "reactPlayerFacebook.js": "/thalmaar-property-demo/static/js/reactPlayerFacebook.86f97b34.chunk.js",
+    "reactPlayerStreamable.js": "/thalmaar-property-demo/static/js/reactPlayerStreamable.797a3a5f.chunk.js",
+    "reactPlayerWistia.js": "/thalmaar-property-demo/static/js/reactPlayerWistia.4b5120e9.chunk.js",
+    "reactPlayerTwitch.js": "/thalmaar-property-demo/static/js/reactPlayerTwitch.1d13894d.chunk.js",
+    "reactPlayerDailyMotion.js": "/thalmaar-property-demo/static/js/reactPlayerDailyMotion.650cf12e.chunk.js",
+    "reactPlayerMixcloud.js": "/thalmaar-property-demo/static/js/reactPlayerMixcloud.a693ee24.chunk.js",
+    "reactPlayerVidyard.js": "/thalmaar-property-demo/static/js/reactPlayerVidyard.c364efef.chunk.js",
+    "reactPlayerKaltura.js": "/thalmaar-property-demo/static/js/reactPlayerKaltura.f8b0876a.chunk.js",
+    "reactPlayerFilePlayer.js": "/thalmaar-property-demo/static/js/reactPlayerFilePlayer.55c4b4e0.chunk.js",
+    "reactPlayerPreview.js": "/thalmaar-property-demo/static/js/reactPlayerPreview.7b4ceeee.chunk.js",
+    "index.html": "/thalmaar-property-demo/index.html",
+    "main.cca193ee.css.map": "/thalmaar-property-demo/static/css/main.cca193ee.css.map",
+    "main.cc4f90e7.js.map": "/thalmaar-property-demo/static/js/main.cc4f90e7.js.map",
+    "reactPlayerYouTube.162b7c79.chunk.js.map": "/thalmaar-property-demo/static/js/reactPlayerYouTube.162b7c79.chunk.js.map",
+    "reactPlayerSoundCloud.c763e4ab.chunk.js.map": "/thalmaar-property-demo/static/js/reactPlayerSoundCloud.c763e4ab.chunk.js.map",
+    "reactPlayerVimeo.6eaf9db7.chunk.js.map": "/thalmaar-property-demo/static/js/reactPlayerVimeo.6eaf9db7.chunk.js.map",
+    "reactPlayerMux.c6f96480.chunk.js.map": "/thalmaar-property-demo/static/js/reactPlayerMux.c6f96480.chunk.js.map",
+    "reactPlayerFacebook.86f97b34.chunk.js.map": "/thalmaar-property-demo/static/js/reactPlayerFacebook.86f97b34.chunk.js.map",
+    "reactPlayerStreamable.797a3a5f.chunk.js.map": "/thalmaar-property-demo/static/js/reactPlayerStreamable.797a3a5f.chunk.js.map",
+    "reactPlayerWistia.4b5120e9.chunk.js.map": "/thalmaar-property-demo/static/js/reactPlayerWistia.4b5120e9.chunk.js.map",
+    "reactPlayerTwitch.1d13894d.chunk.js.map": "/thalmaar-property-demo/static/js/reactPlayerTwitch.1d13894d.chunk.js.map",
+    "reactPlayerDailyMotion.650cf12e.chunk.js.map": "/thalmaar-property-demo/static/js/reactPlayerDailyMotion.650cf12e.chunk.js.map",
+    "reactPlayerMixcloud.a693ee24.chunk.js.map": "/thalmaar-property-demo/static/js/reactPlayerMixcloud.a693ee24.chunk.js.map",
+    "reactPlayerVidyard.c364efef.chunk.js.map": "/thalmaar-property-demo/static/js/reactPlayerVidyard.c364efef.chunk.js.map",
+    "reactPlayerKaltura.f8b0876a.chunk.js.map": "/thalmaar-property-demo/static/js/reactPlayerKaltura.f8b0876a.chunk.js.map",
+    "reactPlayerFilePlayer.55c4b4e0.chunk.js.map": "/thalmaar-property-demo/static/js/reactPlayerFilePlayer.55c4b4e0.chunk.js.map",
+    "reactPlayerPreview.7b4ceeee.chunk.js.map": "/thalmaar-property-demo/static/js/reactPlayerPreview.7b4ceeee.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cca193ee.css",
+    "static/js/main.cc4f90e7.js"
+  ]
+}

@@ -58,4 +58,8 @@
         width: auto;
         padding: 1em 0em;
     }
+
+    .listItem, .dropdown {
+        font-size: 14px;
+    }
 }
