@@ -45,3 +45,15 @@
   width: 50%;
   text-align: center;
 }
+
+@media(min-width: 1025px) {
+  .desktop-hide {
+    display: none !important;
+  }
+}
+
+@media(max-width: 1024px) {
+  .ipad-hide {
+    display: none !important;
+  }
+}

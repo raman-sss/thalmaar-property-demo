@@ -1,0 +1,11 @@
+@media(max-width: 1024px) {
+    .parent {
+        gap: 1.5rem !important;
+    }
+}
+
+@media(max-width: 820px) {
+    .parent {
+        flex-direction: column;
+    }
+}

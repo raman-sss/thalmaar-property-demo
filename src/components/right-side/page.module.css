@@ -9,3 +9,9 @@
 .icon:hover {
     fill: #000000;
 }
+
+@media(max-width: 676px) {
+    .icon {
+        margin: 0 0.25em;
+    }
+}

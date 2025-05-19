@@ -11,3 +11,20 @@ input[type=text], select {
     border: none;
     background-color: #211f1f29;
   }
+
+@media(max-width: 1024px) {
+
+  .col-sm-12 {
+    padding: 0;
+  }
+
+}
+
+
+@media(max-width: 820px) {
+
+  .login-text {
+    height: 75vh;
+  }
+
+}

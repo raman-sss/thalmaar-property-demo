@@ -53,7 +53,7 @@ const LeftSide = () => {
 
             <div className={styles.box}>
                 <h3 className="mt-3 mb-5">Live Activity</h3>
-                <div className={`d-flex flex-row gap-3 ${styles.video}`}>
+                <div className={`d-flex flex-row gap-3 ipad-hide ${styles.video}`}>
                     <div>
                         <ReactPlayer url='https://youtu.be/4jnzf1yj48M?si=VKeIBqQtQ6mHXCb3' playing='true' volume={0} width={240} height={250} />
                     </div>
@@ -62,6 +62,15 @@ const LeftSide = () => {
                     </div>
                     <div>
                         <ReactPlayer url='https://youtu.be/4jnzf1yj48M?si=VKeIBqQtQ6mHXCb3' playing='true' volume={0} width={240} height={250} />
+                    </div>
+                </div>
+                
+                <div className={`d-flex flex-row gap-3 desktop-hide ${styles.video}`}>
+                    <div>
+                        <ReactPlayer url='https://youtu.be/4jnzf1yj48M?si=VKeIBqQtQ6mHXCb3' playing='true' volume={0} width={200} height={220} />
+                    </div>
+                    <div>
+                        <ReactPlayer url='https://youtu.be/2v_7UH_nLv4?si=P3jITcTt5N1zQilD' playing='true' volume={0} width={200} height={220} />
                     </div>
                 </div>
 

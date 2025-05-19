@@ -21,3 +21,23 @@
     font-weight: 600;
     text-decoration: none;
 }
+
+@media(max-width: 576px) {
+    .mobileLogo {
+        display: block !important;
+    }
+
+    .logo {
+        display: none !important;
+    }
+}
+
+@media(min-width: 576px) {
+    .mobileLogo {
+        display: none !important;
+    }
+    
+    .logo {
+        display: block !important;
+    }
+}
