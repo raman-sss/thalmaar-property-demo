@@ -123,7 +123,7 @@ const LeftSide = () => {
                 <div className={`d-flex flex-row gap-3 ipad-hide ${styles.video}`}>
                     <div style={{margin: 'auto'}}>
                         {link ? (
-                            <ReactPlayer url={link} playing={true} volume={0} width={750} height={500} />
+                            <ReactPlayer url={link} playing={true} volume={0} width={750} height={500} controls= {true} loop= {true}/>
                         ) : (
                             <div style={{ width: 750, height: 500, background: "#eee", display: "flex", alignItems: "center", justifyContent: "center" }}>
                                 No video
