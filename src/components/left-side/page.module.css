@@ -9,7 +9,8 @@
     text-align: start;
 }
 
-.box label, .box span {
+.box label,
+.box span {
     font-weight: 600;
 }
 
@@ -24,6 +25,20 @@
 .video {
     border: 1px solid var(--borderColor);
     padding: 1em 0.25em;
+}
+
+.summary button {
+    padding: 1em 2em;
+    background-color: #000000;
+    border-radius: 30px;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    width: 15em;
+}
+
+.summary button:hover {
+    background-color: #a0a0a0;
 }
 
 .summary p {
@@ -59,7 +74,8 @@
         padding: 1em 0em;
     }
 
-    .listItem, .dropdown {
+    .listItem,
+    .dropdown {
         font-size: 14px;
     }
 }

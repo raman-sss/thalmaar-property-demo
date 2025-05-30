@@ -1,9 +1,20 @@
 import React from "react";
 import { MdLogout } from "react-icons/md";
 import styles from './page.module.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+    const navigate= useNavigate();
+
+    function logoutUser(e) {
+    e.preventDefault();
+
+    localStorage.clear("videoLink");
+    localStorage.clear("video_id");
+
+    navigate('/thalmaar-property-demo');
+  }
+
     return (
         <div className= {`d-flex justify-content-between align-items-center ${styles.navbar}`}>
             <svg className= {styles.logo} width="10%" height="10%" viewBox="0 0 80 52" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,7 +26,7 @@ const Navbar = () => {
             </svg>
 
             <div className="d-flex gap-3">
-                <span><Link to= "/thalmaar-property-demo">Logout</Link></span>
+                <span onClick={logoutUser}>Logout</span>
                 <MdLogout />
             </div>
         </div>

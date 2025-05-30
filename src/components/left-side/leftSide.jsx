@@ -1,15 +1,82 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from './page.module.css';
 import { FaPlay } from "react-icons/fa";
 import ReactPlayer from "react-player";
+import { url } from "../../constants/constants";
+import Loader from "../loader/loader";
 
 const LeftSide = () => {
 
-    const [activeTab, setActiveTab]= useState(2);
+    const [activeTab, setActiveTab] = useState(2);
+
+    const [link, setLink] = useState(null);
+
+    const [responseText, setResponseText] = useState('');
+
+    const [loading, setLoading] = useState(false);
+
+    async function analyzeVideo(e) {
+        e.preventDefault();
+        setLoading(true);
+
+        const video_id = localStorage.getItem('video_id');
+        const prompt = 'explain the video';
+
+        if (!video_id || !prompt) {
+            console.error("Missing video_id or prompt in localStorage");
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('video_id', video_id);
+        formData.append('prompt', prompt);
+
+        try {
+            const response = await fetch(`${url}/analyze-video`, {
+                method: 'POST',
+                body: formData
+            });
+
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(`Server responded with ${response.status}: ${errorText}`);
+            }
+
+            const result = await response.json();
+            console.log("Gemini response:", result.response);
+            setResponseText(result.response);
+            setLoading(false);
+            return result.response;
+
+        } catch (error) {
+            console.error("Error analyzing video:", error);
+            return null;
+        }
+    }
+
+
+    // Poll localStorage every second for a new videoLink and update link immediately when found
+    useEffect(() => {
+        const storedLink = typeof window !== "undefined" ? localStorage.getItem("videoLink") : null;
+        if (storedLink) {
+            setLink(storedLink);
+        }
+
+        const interval = setInterval(() => {
+            const latestLink = localStorage.getItem("videoLink");
+            if (latestLink && latestLink !== link) {
+                setLink(latestLink);
+            }
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, [link]);
 
     const handleTabClick = (tabIndex) => {
         setActiveTab(tabIndex);
     }
+
+
 
     return (
         <>
@@ -54,17 +121,18 @@ const LeftSide = () => {
             <div className={styles.box}>
                 <h3 className="mt-3 mb-5">Live Activity</h3>
                 <div className={`d-flex flex-row gap-3 ipad-hide ${styles.video}`}>
-                    <div>
-                        <ReactPlayer url='https://youtu.be/4jnzf1yj48M?si=VKeIBqQtQ6mHXCb3' playing='true' volume={0} width={240} height={250} />
+                    <div style={{margin: 'auto'}}>
+                        {link ? (
+                            <ReactPlayer url={link} playing={true} volume={0} width={750} height={500} />
+                        ) : (
+                            <div style={{ width: 750, height: 500, background: "#eee", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                                No video
+                            </div>
+                        )}
                     </div>
-                    <div>
-                        <ReactPlayer url='https://youtu.be/2v_7UH_nLv4?si=P3jITcTt5N1zQilD' playing='true' volume={0} width={240} height={250} />
-                    </div>
-                    <div>
-                        <ReactPlayer url='https://youtu.be/4jnzf1yj48M?si=VKeIBqQtQ6mHXCb3' playing='true' volume={0} width={240} height={250} />
-                    </div>
+
                 </div>
-                
+
                 <div className={`d-flex flex-row gap-3 desktop-hide ${styles.video}`}>
                     <div>
                         <ReactPlayer url='https://youtu.be/4jnzf1yj48M?si=VKeIBqQtQ6mHXCb3' playing='true' volume={0} width={200} height={220} />
@@ -79,7 +147,27 @@ const LeftSide = () => {
 
 
             <div className={`${styles.box} ${styles.summary}`}>
-                <h3 className="mt-3 mb-5">Detailed Scene Analysis</h3>
+                <div className="d-flex justify-content-between align-items-center mt-3 mb-5">
+                    <h3>Detailed Scene Analysis</h3>
+                    <button className="mt-3 mb-5" onClick={analyzeVideo}>
+                        {loading 
+                        ?
+                        <Loader
+                    style={{
+                        width: '1em',
+                        height: '1em',
+                        borderTop: '3px solid #fff',
+                        margin: 'auto',
+                        // left: '50%',
+                        position: 'relative'
+                    }}
+                /> 
+                        : 
+                        "Generate Live Summary"}
+                    </button>
+                </div>
+                
+                
                 <ul className="nav nav-tabs">
                     <li
                         className={`nav-item nav-link ${styles.listItem} ${activeTab === 1 ? "active" : ""}`}
@@ -100,7 +188,7 @@ const LeftSide = () => {
                         Camera Feed 3
                     </li>
                 </ul>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit perspiciatis ex blanditiis animi maxime nihil ratione dolore modi in eaque veniam libero doloribus, esse, id itaque impedit commodi? Expedita obcaecati commodi perspiciatis voluptatum hic! Quae, quaerat. Esse reiciendis fugiat odit nobis hic temporibus rerum magnam maiores earum totam voluptate beatae culpa, quis cumque nulla, quisquam quod quae, excepturi inventore quas rem natus facilis. Ipsa maxime similique quae iusto, doloribus blanditiis corrupti ipsam aliquid perferendis at optio, ratione, dolorem accusantium voluptatem non a? Eligendi nobis iusto a accusantium eum ipsa iure repellendus vitae deserunt tenetur magnam amet consequuntur suscipit, incidunt error dolorem velit eius rerum officia ab excepturi qui tempora, placeat quaerat! Iusto nihil rem consectetur corrupti omnis quia. Doloribus fugiat totam quasi laudantium! Obcaecati harum dolor necessitatibus id a sed nemo nesciunt recusandae dolore totam ipsam aspernatur quo exercitationem, quaerat velit enim, ut ea incidunt repellat repellendus autem. Sed sint perspiciatis inventore dolor asperiores ea doloremque, cumque tempore doloribus repellendus velit possimus aperiam aliquam pariatur culpa sit, eos quas? Sint quisquam neque quis, sequi unde nisi suscipit expedita voluptatibus eveniet natus corrupti doloribus eum, incidunt nihil assumenda nulla fugiat ab aperiam. Illo ducimus autem earum cupiditate labore quisquam corrupti non dolores, corporis repudiandae voluptates voluptate magnam id, adipisci mollitia iure accusamus reprehenderit tenetur dicta vero vitae nihil expedita a at? Assumenda animi repudiandae autem amet possimus ea cum quibusdam ut nobis in rerum, deserunt, debitis dolorem consectetur. Repudiandae, suscipit magnam? Architecto dolorum dignissimos et rerum cupiditate, nam id eum tempore explicabo unde sed ut consequatur dolorem magni totam. Illo iure distinctio animi non voluptatum, quas sapiente fuga harum possimus sint, nobis rem, voluptatibus mollitia necessitatibus ratione perferendis. Ratione, nesciunt ipsam! Mollitia qui eius at omnis iure necessitatibus minus nobis accusantium architecto, magni expedita optio, quos, ratione deserunt a exercitationem culpa corporis dolor consectetur tempore similique cumque saepe. Repellendus velit qui consectetur minus ad, laboriosam deleniti natus numquam. Dolorem non deleniti officiis unde nostrum necessitatibus. Rem voluptate tempore nam exercitationem recusandae ratione deleniti enim earum totam, itaque commodi beatae praesentium consequuntur est ipsam odit debitis odio magnam, a eius provident atque consequatur. Distinctio id, ipsum earum ex ipsa veniam vel in molestiae, provident, praesentium velit delectus perferendis labore! Dolorum sapiente totam animi sunt ut porro nobis, placeat dolor hic et, sed laborum veniam earum, eius mollitia id quod? Beatae nesciunt, molestias explicabo rerum nisi suscipit cupiditate laudantium, numquam dolorum, fuga dicta dignissimos molestiae distinctio quibusdam? Consectetur autem sequi voluptate accusantium doloribus deleniti, labore totam ad laborum itaque eaque voluptatum! Porro molestiae impedit aperiam sed! Asperiores, corrupti deserunt? Labore consequatur recusandae quisquam ut repellat optio itaque, et quidem facere alias commodi vitae aperiam, assumenda iusto dignissimos aspernatur quae, obcaecati error eligendi. Praesentium, aut, deleniti cupiditate eveniet quis laborum enim aliquam omnis eligendi asperiores voluptatum obcaecati, ducimus corrupti voluptatem dolores. Quam animi ducimus impedit in iusto perspiciatis iste omnis esse amet quod excepturi expedita, illum neque placeat suscipit atque quasi laboriosam at quae possimus sequi repellat! Ullam saepe quos possimus praesentium consequuntur minus.</p>
+                <p>{responseText || "No analysis yet."}</p>
             </div>
         </>
     )

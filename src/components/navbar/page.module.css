@@ -16,10 +16,11 @@
     background-color: #a0a0a0;
 }
 
-.navbar a {
+.navbar span {
     color: #ffffff;
     font-weight: 600;
     text-decoration: none;
+    cursor: pointer;
 }
 
 @media(max-width: 576px) {
