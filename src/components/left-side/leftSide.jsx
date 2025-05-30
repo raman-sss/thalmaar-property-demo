@@ -20,7 +20,7 @@ const LeftSide = () => {
         setLoading(true);
 
         const video_id = localStorage.getItem('video_id');
-        const prompt = 'explain the video';
+        // const prompt = 'explain the video';
 
         if (!video_id || !prompt) {
             console.error("Missing video_id or prompt in localStorage");
